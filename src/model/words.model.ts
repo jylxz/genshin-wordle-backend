@@ -1,6 +1,7 @@
 import mongoose from "mongoose"
 
 export interface Words {
+  _id: string;
   word: string;
   lastUsed: Date | null
 }

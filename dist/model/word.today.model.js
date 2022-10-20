@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const wordTodaySchema = new mongoose_1.default.Schema({
     word: String,
-    lastUsed: Date,
 }, {
     collection: "word.today",
     timestamps: true,
