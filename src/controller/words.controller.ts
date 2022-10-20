@@ -13,7 +13,7 @@ export const getWord = async (
   next: NextFunction
 ) => {
   let word: Words | WordToday | null;
-  const mode = req.query.mode;
+  const mode = req.query.mode || "today";
 
   switch (mode) {
     case "today":

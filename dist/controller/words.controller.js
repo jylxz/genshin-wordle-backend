@@ -13,7 +13,7 @@ exports.addWords = exports.getWord = void 0;
 const words_service_1 = require("../service/words.service");
 const getWord = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     let word;
-    const mode = req.query.mode;
+    const mode = req.query.mode || "today";
     switch (mode) {
         case "today":
             word = yield (0, words_service_1.getWordOfTheDay)();
