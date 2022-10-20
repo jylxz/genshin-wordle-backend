@@ -14,11 +14,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv/config");
 const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
 const connect_1 = __importDefault(require("./database/connect"));
 const words_routes_1 = __importDefault(require("./routes/words.routes"));
 const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use(express_1.default.json({ type: "application/json" }));
+app.use((0, cors_1.default)());
 app.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
     console.log(`App is running on Port ${port}`);
     yield (0, connect_1.default)();

@@ -8,6 +8,7 @@ const app = express()
 const port = process.env.PORT
 
 app.use(express.json({ type: "application/json" }));
+app.use(cors())
 
 app.listen(port, async () => {
   console.log(`App is running on Port ${port}`)
